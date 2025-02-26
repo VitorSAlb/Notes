@@ -1,4 +1,4 @@
-# Spring Security
+V# Spring Security
 
 > Projeto do ecossistema Spring que conta com uma poderosa estrutura personalizável para implementação de autenticação e autorização em aplicações Java Spring.
 
