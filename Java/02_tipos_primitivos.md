@@ -28,3 +28,11 @@ O cast é quando forçamos a entrada de um tipo em outro tipo.
 long numeroGrande = 100L;
 int numero = (long) numeroGrande;
 ```
+
+## String
+**Não é um tipo primitivo**, é uma classe, considerada como tipo de refência.
+
+``` java
+
+String texto = "Grande texto, dkasdaskdaksdkasdkakdska";
+```
