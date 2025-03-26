@@ -21,18 +21,18 @@ public class Fila {
         System.out.println(f.pop());
         System.out.println(f.pop());
 
-        Queue<String> filaLinkada = new LinkedList<>();
+        Queue<String> filaLinked = new LinkedList<>();
 
-        filaLinkada.add("a");
-        filaLinkada.add("b");
-        filaLinkada.add("c");
-        filaLinkada.add("d");
+        filaLinked.add("a");
+        filaLinked.add("b");
+        filaLinked.add("c");
+        filaLinked.add("d");
 
-        System.out.println(filaLinkada.poll());
+        System.out.println(filaLinked.poll());
 
-        filaLinkada.forEach(System.out::println);
+        filaLinked.forEach(System.out::println);
 
-        System.out.println(filaLinkada);
+        System.out.println(filaLinked);
     }
 
     public Object[] objects;
@@ -52,7 +52,6 @@ public class Fila {
         objects[lastPosition] = element;
         lastPosition = (lastPosition + 1) % objects.length;
         total++;
-
     }
 
     public Object pop() {
