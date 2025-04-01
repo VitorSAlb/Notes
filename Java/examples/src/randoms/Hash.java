@@ -1,7 +1,9 @@
 package src.randoms;
 
 import java.sql.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 public class Hash {
@@ -14,6 +16,21 @@ public class Hash {
         products.put("Milk", 1.49);
 
         System.out.println(products.get("Apple"));
+
+        HashSet<String> votaram = new HashSet<>();
+
+        votaram.add("Vitor");
+        votaram.add("Clara");
+        votaram.add("Carlos");
+        votaram.add("Geo");
+
+        if (votaram.contains("Lis")) System.out.println("Lis já votou!");
+        else votaram.add("Lis");
+
+        if (votaram.contains("Vitor")) System.out.println("Vitor já votou!");
+        else votaram.add("Vitor");
+
+        votaram.forEach(System.out::println);
 
     }
 }
