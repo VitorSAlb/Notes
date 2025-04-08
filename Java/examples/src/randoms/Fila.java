@@ -1,5 +1,6 @@
 package src.randoms;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -11,28 +12,32 @@ public class Fila {
 
         System.out.println(f.isEmpty());
         System.out.println(f.isFull());
-        f.push(1);
-        f.push(2);
-        f.push(3);
-        f.push(4);
-        f.push(5);
+        f.push("a");
+        f.push("b");
+        f.push("c");
+        f.push("d");
+        f.push("e");
         System.out.println(f.isFull());
+        System.out.println(f);
+        System.out.println(f.pop());
+        System.out.println(f);
+        f.push("8");
+        f.pop();
+        System.out.println(f);
         System.out.println(f.pop());
         System.out.println(f.pop());
-        System.out.println(f.pop());
 
-        Queue<String> filaLinked = new LinkedList<>();
-
-        filaLinked.add("a");
-        filaLinked.add("b");
-        filaLinked.add("c");
-        filaLinked.add("d");
-
-        System.out.println(filaLinked.poll());
-
-        filaLinked.forEach(System.out::println);
-
-        System.out.println(filaLinked);
+//        Queue<String> filaLinked = new LinkedList<>();
+//
+//        filaLinked.add("a");
+//        filaLinked.add("b");
+//        filaLinked.add("c");
+//        filaLinked.add("d");
+//
+//        System.out.println(filaLinked.poll());
+//
+//        filaLinked.forEach(System.out::println);
+//        System.out.println(filaLinked);
     }
 
     public Object[] objects;
@@ -57,6 +62,7 @@ public class Fila {
     public Object pop() {
         if(isEmpty()) throw new RuntimeException("Fila is Empty");
         Object obj = objects[fistPosition];
+        objects[fistPosition] = null;
         fistPosition = (fistPosition + 1) % objects.length;
         total--;
         return obj;
@@ -70,4 +76,13 @@ public class Fila {
         return total == objects.length;
     }
 
+    @Override
+    public String toString() {
+        return "Fila{" +
+                "objects=" + Arrays.toString(objects) +
+                ", fistPosition=" + fistPosition +
+                ", lastPosition=" + lastPosition +
+                ", total=" + total +
+                '}';
+    }
 }
