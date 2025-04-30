@@ -1,0 +1,40 @@
+package src.Ativities.Pilha;
+
+public class No<T> {
+
+    private T value;
+    private No<T> next;
+
+    public No(T value) {
+        this.value = value;
+    }
+
+    public No(T value, No<T> next) {
+        this.value = value;
+        this.next = next;
+    }
+
+    public T getValue() {
+        return value;
+    }
+
+    public void setValue(T value) {
+        this.value = value;
+    }
+
+    public No<T> getNext() {
+        return next;
+    }
+
+    public void setNext(No<T> next) {
+        this.next = next;
+    }
+
+    @Override
+    public String toString() {
+        return "No{" +
+                "value= " + value +
+                ", next= " + next +
+                '}';
+    }
+}
